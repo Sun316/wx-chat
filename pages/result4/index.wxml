@@ -1,0 +1,23 @@
+ <!-- {{b}}  -->
+
+
+<view class="wrap">
+  <view class="top">
+    <canvas class="cir" style="width:180px; height:180px;" canvas-id="canvasArc">
+    </canvas>
+ 
+    <view class="cc">
+     <view class="cc">{{b}}/10</view>{{words}}
+    </view>
+ 
+  </view>
+  <view class='detail' wx:if="{{b!=10}}">
+      <view class="title7" style='color:#66cccc'>正确防晒护肤小提示:</view>
+          <view class='tips' wx:for="{{dataList}}" wx:key="tips">
+        <view>{{item.tips}}</view>
+       </view> 
+  </view>
+  <view wx:else style='margin:22rpx;'>
+ 可喜可贺！恭喜你成为防晒小达人，相信你一定是个非常精致的爱美人士。一定要跟大家多多分享你的防晒护肤技巧和知识哦~
+  </view>
+</view>

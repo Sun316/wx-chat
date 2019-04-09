@@ -1,0 +1,57 @@
+/* pages/result/index.wxss */
+page{background-color: #fff;}
+.list{height: 30px; line-height: 30px; border-bottom:1px solid;}
+.list-right{float: right}
+.box{height:0px;overflow:hidden;}
+.classname{line-height: 40px;}
+view{line-height: 42rpx;}
+page{height: 100%;}
+/* .content{padding-bottom: 20rpx; box-sizing: border-box; height: 100%;} */
+.location{width: 100%;}
+.location_top{height: 76rpx;line-height: 76rpx; background: #f4f4f4;color: #606660;font-size: 28rpx;padding: 0 20rpx;}
+.location_bottom{height: 140rpx;line-height: 140rpx;color: #d91f16;font-size: 28rpx;border-top: 2rpx #ebebeb solid; border-bottom: 2rpx #ebebeb solid;padding: 0 20rpx; align-items: center;display: -webkit-flex;}
+.address_top{height: 76rpx;line-height: 76rpx; background: #f4f4f4;color: #999999;font-size: 28rpx;padding: 0 20rpx;}
+.address_bottom{height: 88rpx;line-height: 88rpx; background: #fff;color: #000000;font-size: 32rpx;padding: 0 20rpx; border-bottom: 2rpx #ebebeb solid;margin-left: 20rpx;margin-right: 50rpx;}
+.location_img{width: 48rpx;height: 48rpx;position: absolute;right: 20rpx;top: 125rpx;}
+.add_city{width: 228rpx;height: 60rpx;line-height: 60rpx; text-align: center; border: 2rpx solid #ebebeb; color: #000000;margin-right: 20rpx;}
+.add_citying{width: 228rpx;height: 60rpx;line-height: 60rpx; text-align: center; border: 2rpx solid #09bb07; color: #09bb07;margin-right: 20rpx;} .orientation_region{width:100%;height:55rpx;z-index:100;padding-left:8rpx;font-size:32rpx;background-color:#fff;display:block;position: fixed;top:0;left:0;}
+.kong{width:100%;height:80rpx;visibility: hidden;} .orientation_city{float:left;width:20%;color:#323232;} .orientation_city:first-child{color:#57b3ba;} .active{color:#57b3ba;} .star:first-child{margin-left: 20rpx;} .name1{padding-right: 50rpx} .line1{width:100%;height:9rpx;margin-top:25rpx;background-color: #f2f0f1;} .line{width:106%;height:9rpx;margin-top:60rpx;background-color: #f2f0f1;margin-left:-3%;} .line7{width:100%;height:9rpx;background-color: #f2f0f1;} .first{width:57rpx;height:53rpx;margin-top:-2rpx;float: left} .first1{width:32rpx;height:32rpx;} .first7{width:57rpx;height:53rpx;margin:-2rpx 12rpx 0 -5rpx;float: left} .know{padding: 23rpx;}
+.project{width: 270rpx;height:270rpx;margin-top:17rpx;margin-bottom:32rpx;}
+.detail{width: 100%;color: #6a6a6a;padding-bottom: 25rpx;}
+.detail1{width: 100%;color: #6a6a6a;margin-left:8rpx;line-height:48rpx;}
+.img_title{color:#333;font-size:32rpx;float:left;margin-left:14rpx;}
+.img_title1{color:#333;font-size:32rpx;float:left;}
+.title_name1{margin-left:-48rpx}
+.title_name2{margin-left:9rpx}
+.zhanwei{width: 100%;height: 40rpx;margin-bottom:8rpx;}
+.zhanwei1{width: 100%;height: 40rpx;margin-bottom:15rpx;}
+.name{padding-right:30rpx;}
+.price{float:right;width:59%;margin-top:19rpx;line-height:47rpx;}
+.title_name{color: #333333;font-size: 30rpx;margin-left:7rpx;}
+.swiper{height: 370rpx; width: 70%;margin:0 auto;margin-top: 20rpx;}
+.text{color:#818181;margin-left:40rpx;margin-top:-46rpx;line-height:44rpx;}
+.swiper image{height: 100%; width: 100%;}
+.file{padding:23rpx}
+.table{background-color: #f9f9f9;margin:36rpx auto;width: 92%;height: 666rpx;}
+.left{float: left;width:32%;height: 80rpx;line-height: 80rpx;text-align: center}
+.right{float:right;width:59%;height: 80rpx;line-height: 80rpx;text-align:right;font-size:28rpx;color:#818181;margin-right:53rpx;}
+.table1{width: 100%;height: 80rpx;}
+.table2{width:92%;height: 80rpx;margin:0 auto;background-color: #fff;}
+.left1{float: left;width:31%;height: 80rpx;margin-left:-12rpx;
+line-height: 80rpx;text-align: center}
+.right1{float:right;width:62%;height: 80rpx;margin-right:21rpx;line-height: 80rpx;text-align:right;font-size:27rpx;color:#818181}
+.down{float: right;margin-right: 50rpx;} .hide{display: none;}
+.show{display: block;}
+.star{margin-left:11rpx;width:30rpx;height:30rpx;}
+.effect{color:#57b3ba;margin-left:153rpx;font-size:26rpx;}
+.time{color:#57b3ba}
+.bottom_title{color: #57b3ba;margin-bottom: -33rpx;display: block}
+.bottom{width: 90%;border: 1px solid #57b3ba;margin: 35rpx auto;padding: 20rpx;}
+.alike_content{color:#52b3bc}
+.loop{margin-top: 12rpx;line-height:48rpx;}
+.question{padding: 25rpx;}
+.tips{padding: 23rpx;} .after_op{padding: 23rpx;}
+.question_content{line-height: 52rpx;}
+.alike{margin-bottom:-36rpx;}
+.tips_content:first-child{margin-left: -60rpx;}
+.content{height: 100%}

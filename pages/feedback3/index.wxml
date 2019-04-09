@@ -1,0 +1,115 @@
+<!--pages/feedback/index.wxml-->
+<view class="container" id='scroll'>
+    <import src="/template/addtell.wxml"/>
+    <template is="addtell" data="{{...addtell}}"/>
+  <!--反馈内容-->
+     <ul class="scrollwechat"  bindtap="closeimg">
+      <!-- <scroll-view class="scrollview" scroll-y="true" > -->
+      <view class='scroll' >
+      <block  wx:for="{{feedback}}" wx:key="index">
+       <li wx:if="{{item.myDate}}" class="mydate">
+            <view class="mydatebox">
+              <text class="mydatetext">{{item.myDate}}</text>
+             </view>
+        </li>
+      <li class="{{item.role?'user':'sys'}}">
+      <!--头像-->
+         <view class="{{item.role?'imgview2':'imgview1'}}">
+          <image class="headimg" src="{{item.img}}"></image> 
+         </view>
+        <!--三角-->
+         <view class="triangle" >
+              <image wx:if="{{item.role==true&&item.img}}" src="../../images/hotapp_triangleRight.png"></image>
+              <image wx:if="{{item.role==false&&item.img}}" src="../../images/hotapp_triangleLeft.png"></image>
+              <!-- <image wx:if="{{!item.img}}" src="../../images/hotapp_triangleLeft1.png"></image> -->
+         </view>
+         <!--内容 ：图片/文字 角色内容显示-->
+     
+        <view class="{{item.role?'textview2':'textview3'}}">
+          <view class="feedbackimg" wx:if="{{item.content_type==1}}">
+          <!-- 头图 -->
+             <view wx:if="{{item.whether}}" style='background-color:#fff;width:75%;margin-left:-20rpx;height:363rpx;'>
+                   <!-- 传参 -->
+                  <!-- {{item.maxV}} {{item.title}}  -->
+                  <image wx:if="{{item.whether==7}}" src="{{item.content}}" class="head" data-imgs="{{item.content}}">111</image> 
+                   <!-- 结果图跳转 -->
+                   <navigator url="../../pages/result3/index?answer={{item.maxV}}&title={{item.title}}">  
+                      <image wx:if="{{item.whether==1}}" src="{{item.content}}" class="head" data-imgs="{{item.content}}" bindtap="linkAnther"></image> 
+                   </navigator> 
+                       </view>
+             <view wx:if="{{item.whether!=4&&item.whether!=1&&item.whether!=7&&!item.content_img}}" style='background-color:#fff;margin-left:-20rpx;padding:20rpx;'><text>{{item.content}}</text></view> 
+          </view>
+           <view  wx:else>
+
+           <!-- <view wx:if="{{item.img}}"> -->
+           <!-- 左边-->
+           <view  wx:if="{{item.whether==6}}" class="feedbacktext" style='border-radius:10rpx;background-color:#FFF;margin-left:-20rpx;padding:20rpx;'>
+                 {{item.content}}
+           </view> 
+                     <view  wx:if="{{item.content_img}}" style='background-color:#fff;margin-left:-20rpx;'><image class="ai" src="{{item.content_img}}"></image> </view>
+           <!-- abcd -->
+<view style='background-color:#fff;padding:16rpx;margin-bottom:-20rpx;'  wx:if="{{item.role&&!item.img}}">
+            <view class="feedbacktext">
+            <view  class="feedbacktext2">
+            <view  wx:for-index="index" wx:for-item="item" style='{{key==index?"background-color:RGBA(213,234,248,.7);":""}} z-index:999;padding:12rpx;' bindtap='changColor' data-index='{{index}}'>{{item.content}}
+            </view>
+
+
+
+            <!-- <view style="background-color:{{viewBg}}" bindtap='changeBg'> -->
+            <!-- {{item.content}}223354637 -->
+       
+           <!-- </view>  -->
+            </view> </view>
+           </view> 
+           <!-- 右边 -->
+           <view wx:if="{{item.role==false}}" class='textview'>{{item.content}}</view>
+            <view wx:else  class="feedbacktext" style='border-radius:10rpx;background-color:#FFF;margin-left:-20rpx;'>
+               <!-- <text v-if="{{item.option==a}}" bindtap="btn_default">{{item.content}}</text>        
+                  <text v-if="{{item.option==b}}">{{item.content}}</text>        
+                  <text v-if="{{item.option==c}}">{{item.content}}</text>        
+                  <text v-if="{{item.option==d}}">444444</text>   -->           
+            </view> 
+           </view>                   
+                <view  >
+             </view> 
+        </view>
+
+        <view wx:if="{{networkType=='fail'}}"><icon type="warn" size="20"/></view>
+        <view class="{{item.role?'imgview1':'imgview2'}}"></view>
+      </li>
+      </block>
+       <!-- </scroll-view> -->
+       </view>
+    </ul>
+</view>
+  <!--提交框-->
+  <view  class="footer">
+    <view  class="footinput">
+       <view wx:if="{{sendflag==0}}" class="foodsend">
+        <!-- <view class="send">发送1</view> -->
+           <view class="input">
+         <!-- <input  type="button" bindfocus="bindfocus" bindtap='bindtap1'  value="{{addinput}}"/>  -->
+        <button style="background-color:#9fe658;" bindfocus="bindfocus" bindtap='bindtap' value="{{addinput}}">开始
+        </button>
+        </view>
+      </view>
+      <view wx:if="{{sendflag==1}}"  class="footadd">
+        <view class="addbroder">
+             <!-- <button class='more' bindtap="btn_default">a</button>
+             <button class='more' bindtap="btn_primary">b</button>
+             <button class='more' bindtap="btn_warn">c</button>     
+             <button class='more' bindtap="btn_four">d</button>      -->
+        </view>
+      </view>
+     
+        <view wx:if="{{sendflag==2}}" class="foodsend" style='background-color:#fff'>
+         <view style='padding-left:20rpx;'>
+          <view class="input">
+             <button class="bottomButton" bindtap="test_again">再测一次</button>
+             <button class="bottomButton" bindtap="jump">更多测试</button>
+          </view>
+       </view>   
+    </view>
+    </view>
+  </view>

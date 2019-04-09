@@ -1,0 +1,18 @@
+.container{height: 100%; display: flex; flex-direction: column; box-sizing: border-box; padding: 50rpx;}
+.header{display: flex; flex-direction: column;}
+.h1{font-weight: bold;}
+.h1content{font-size: 12px;}
+.section{margin: 100rpx 0; height: 120rpx; line-height: 120rpx; border-radius: 10rpx; background: #fff; padding:0 20rpx;}
+.section1{-webkit-appearance: none;width: 92%;height: 200rpx;position:relative;margin:5% auto;border-radius:15rpx;-moz-box-shadow:1rpx 1rpx 1rpx 1rpx #bdbab4;/*firefox*/ 
+-webkit-box-shadow:1rpx 1rpx 1rpx 1rpx #bdbab4;/*webkit*/ 
+box-shadow:1rpx 1rpx 1rpx 1rpx #bdbab4;/*opera或ie9*/ background-color:#fff;}
+.button{display: flex; justify-content: space-between;}
+.goTo{height:78rpx;float:left;width:15%;margin-top:31rpx;overflow:hidden;text-align:center;color: #544835;}
+.image{height: 200rpx;width:100%;overflow:hidden;border-radius:15rpx 15rpx 0 0; position: relative;}
+.test-img{height: 200rpx;width:100%;overflow:hidden;border-radius:15rpx;}
+.test-content{width: 100%;height: 100rpx;background-image:url(http://deer.ysigntech.com/upload/qYfmwk/back1.png);border-radius:0 0 15rpx 15rpx;position:absolute;bottom:0;}
+.test-img1{width: 70rpx;height: 70rpx;margin:19rpx;border-radius: 18rpx;float: left}
+.words{width: 69%;height:93rpx;float: left;padding-top:10rpx;border-right:1px solid #dcd2c4;}
+.words1{width: 69%;height:100rpx;float: left;margin-top:10rpx;}
+.one{color: #352712}
+.two{color: #bbb7b1}

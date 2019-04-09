@@ -1,0 +1,20 @@
+{
+  "debug":"true",
+  "pages":[
+    "pages/index/index",
+    "pages/feedback/index",
+    "pages/feedback2/index",
+    "pages/feedback3/index",
+    "pages/feedback4/index",
+    "pages/result/index",
+    "pages/result2/index",
+    "pages/result3/index",
+    "pages/result4/index"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "鹿大明白",
+    "navigationBarTextStyle":"black"
+  }
+}

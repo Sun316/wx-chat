@@ -1,0 +1,64 @@
+<!-- 需要使用 button 来授权登录 -->
+<!-- <button wx:if="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">授权登录</button>
+<view wx:else>请升级微信版本</view> -->
+
+<view class='container1'>
+  <view class="section1" bindtap="bindViewTap">
+    <view class='image'><image class="test-img" src='http://deer.ysigntech.com/upload/qYfmwk/banner1.png'></image></view>
+       <view class='test-content'>
+             <image class="test-img1" src='http://deer.ysigntech.com/upload/qYfmwk/icon1.png'></image>
+             <view class='words'>
+                <view class='one'>趁早下“斑”</view>
+                <view class='two'>皮秒、超皮秒傻傻分不清？</view>
+             </view>
+              <view class='goTo'>去测></view>
+
+       </view> 
+  </view> 
+  <view class="section1" bindtap="bindViewTap2">
+    <view class='image'><image class="test-img" src='http://deer.ysigntech.com/upload/qYfmwk/banner2.png'></image></view>
+       <view class='test-content'>
+             <image class="test-img1" src='../../images/icon4.png'></image>
+             <view class='words'>
+                <view class='one'>面部提升秘籍</view>
+                <view class='two'>逆龄抗衰神器了解一下？</view>
+             </view>
+              <view class='goTo'>去测></view>
+
+       </view> 
+  </view> 
+   <view class="section1" bindtap="bindViewTap3">
+    <view class='image'><image class="test-img" src='http://deer.ysigntech.com/upload/qYfmwk/banner3.png'></image></view>
+       <view class='test-content'>
+             <image class="test-img1" src='http://deer.ysigntech.com/upload/qYfmwk/icon3.png'></image>
+             <view class='words'>
+                <view class='one'>抚平岁月痕迹</view>
+                <view class='two'>重现面部年轻态？针显奇迹</view>
+             </view>
+              <view class='goTo'>去测></view>
+
+       </view> 
+  </view> 
+  <view class="section1" bindtap="bindViewTap4">
+    <view class='image'><image class="test-img" src='../../images/banner5.png'></image></view>
+       <view class='test-content'>
+             <image class="test-img1" src='http://deer.ysigntech.com/upload/qYfmwk/icon3.png'></image>
+             <view class='words'>
+                <view class='one'>你是不是防晒小达人？</view>
+                <view class='two'>防晒的正确打开方式了解一下？</view>
+             </view>
+              <view class='goTo'>去测></view>
+
+       </view> 
+  </view>
+ <view class="section1">
+    <view class='image'><image class="test-img" src='http://deer.ysigntech.com/upload/qYfmwk/banner4.png'></image></view>
+       <view class='test-content'>
+             <image class="test-img1" src='http://deer.ysigntech.com/upload/qYfmwk/icon2.png'></image>
+             <view class='words1'>
+                <view class='one'>敬请期待</view>
+                <view class='two'>其他好玩有趣的测试 敬请期待！</view>
+             </view>
+       </view> 
+  </view>
+</view>

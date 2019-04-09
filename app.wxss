@@ -1,0 +1,15 @@
+/**app.wxss**/
+page{
+     background: #efeff4; 
+     font-size: 30rpx;
+     font-family:microsoft yahei
+}
+.container {
+  display: flex;
+  display:-webkit-flex;
+  box-sizing: border-box;
+} 
+.placeholder{
+    font-size: 30rpx;
+    color: #999;
+}

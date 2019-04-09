@@ -1,0 +1,31 @@
+/* pages/feedback/index.wxss */
+page{width: 100%; min-height:100%;}
+.container{height: 100%; width: 100%; flex-direction: column;}
+/*聊天盒子*/ .scrollwechat{/* flex: 1; */ /* display: flex; */ /* flex-direction: column; */ /* overflow: hidden; */ /* height: 100%; */}
+.scroll{overflow-y: scroll;
+padding-bottom: 90rpx;}
+.scrollwechat li{width: 100%; display: flex; margin-top: 20rpx;}
+.mydate{display: flex; justify-content: center; align-items: center;}
+.mydatebox{background: #d9d9d9; border-radius: 15rpx; padding: 0rpx 10rpx;}
+.mydatetext{color: #fff; font-size: 12px;}
+.container .user{flex-direction: row; margin-bottom:30rpx;}
+.container .sys{flex-direction: row-reverse;}
+/* .feedbackimg image{width: 487rpx; height: 260rpx;} */
+.ai{width:300rpx; height:358rpx;}
+.head{width: 320rpx; height: 320rpx;}
+.content{width: 220rpx; height: 220rpx;}
+.headimg{width: 80rpx; height: 80rpx;}
+.imgview1{width: 118rpx; display: flex; justify-content: center;}
+.imgview2{display: flex; justify-content: center;
+margin-left: 20rpx;}
+.textview{border-radius: 10rpx; background: #d5eaf8; padding: 20rpx;}
+.triangle image{width: 20rpx; height: 80rpx; transform:rotate(180deg);}
+.textview2{max-width:65%; background: #fff; border-radius: 10rpx; padding: 20rpx;} .footer{width: 96%; height: 68rpx; padding: 2%; display: flex; flex-direction: row; justify-content: center; align-items: center; flex-wrap: nowrap; background: #fff; position: fixed; bottom: 0; right: 0;}
+.footinput{flex: 1; height: 100rpx; display: flex; justify-content: center; align-items: center;} /* .input{*/ /* width: 100%; */ /* height: 60rpx; padding: 10rpx 4rpx; border: 1px solid #ccc; border-radius: 10rpx; */
+/*} */ .foodsend{width: 100%;}
+/* .send{font-size: 14px; color: #fff;} */
+/* .tellinput{height: 50rpx; line-height: 50rpx; border: 1px solid #efeff4;} */
+.footadd{width:100%;}
+.addbroder{width: 100%;}
+.more{float:left; width: 32.2%; margin-right: 1%; background-color: #9fe658;}
+.bottomButton{background-color:#9fe658;width:48%;float:left;margin-right: 2%}

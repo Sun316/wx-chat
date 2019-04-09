@@ -1,0 +1,11 @@
+/* pages/result/index.wxss */
+.cir{display: inline-block;margin-top: 20rpx;}
+.top{height: 200px;text-align: center;border-bottom: 1px solid #ccc;}
+.cc{color: #66cccc;margin-top: -120px;}
+.detail{margin: 30rpx 20rpx;}
+page{background-color: #fff;}
+.tips{font-size:27rpx;
+color:#666;
+line-height:40rpx;
+}
+.title7{margin-bottom:5px;font-weight:bold;font-size:28rpx;color:#333;}

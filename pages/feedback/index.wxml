@@ -1,0 +1,79 @@
+<!--pages/feedback/index.wxml-->
+<view class="container" id='scroll'>
+    <import src="/template/addtell.wxml"/>
+    <template is="addtell" data="{{...addtell}}"/>
+  <!--反馈内容-->
+     <ul class="scrollwechat"  bindtap="closeimg">
+      <!-- <scroll-view class="scrollview" scroll-y="true" > -->
+      <view class='scroll' >
+      <block  wx:for="{{feedback}}" wx:key="index">
+       <li wx:if="{{item.myDate}}" class="mydate">
+            <view class="mydatebox">
+              <text class="mydatetext">{{item.myDate}}</text>
+             </view>
+        </li>
+      <li class="{{item.role?'user':'sys'}}">
+      <!--头像-->
+         <view class="{{item.role?'imgview2':'imgview1'}}"><image class="headimg" src="{{item.img}}"></image></view>
+        <!--三角-->
+         <view class="triangle" >
+              <image wx:if="{{item.role}}" src="../../images/hotapp_triangleRight.png"></image>
+              <image wx:else src="../../images/hotapp_triangleLeft.png"></image>
+         </view>
+         <!--内容 ：图片/文字-->
+     
+        <view class="{{item.role?'textview2':'textview'}}">
+          <view class="feedbackimg" wx:if="{{item.content_type==1}}">
+             <view wx:if="{{item.whether}}">
+               <!-- 传参 -->
+                  <!-- {{item.maxV}} {{item.title}}  -->
+                <image wx:if="{{item.whether==7}}" src="{{item.content}}" class="head" data-imgs="{{item.content}}">111</image> 
+              <navigator url="../../pages/result/index?answer={{item.maxV}}&title={{item.title}}">  
+                <image wx:if="{{item.whether==1}}" src="{{item.content}}" class="head" data-imgs="{{item.content}}" bindtap="linkAnther"></image> 
+              </navigator> 
+             <!--一句话 一个图  -->
+                  <image wx:if="{{item.whether==4}}" class="content" src="{{item.content}}" data-imgs="{{item.content}}">222</image> 
+                  <view>{{item.content1}}</view>
+            </view>
+          <view  wx:if="{{item.content_img}}"><text class="feedbacktext" style="display:block">{{item.content}}</text><image class="ai" src="{{item.content_img}}"></image> </view>
+           <view wx:if="{{item.whether!=4&&item.whether!=1&&item.whether!=7&&!item.content_img}}"><text class="feedbacktext">{{item.content}}</text></view> 
+          </view>
+
+           <view  wx:else><text class="feedbacktext">{{item.content}}</text> </view> 
+        </view>
+        <view wx:if="{{networkType=='fail'}}"><icon type="warn" size="20"/></view>
+        <view class="{{item.role?'imgview1':'imgview2'}}"></view>
+      </li>
+      </block>
+       <!-- </scroll-view> -->
+       </view>
+    </ul>
+</view>
+  <!--提交框-->
+  <view  class="footer">
+    <view  class="footinput">
+       <view wx:if="{{sendflag==0}}" class="foodsend">
+        <!-- <view class="send">发送1</view> -->
+           <view class="input">
+         <!-- <input  type="button" bindfocus="bindfocus" bindtap='bindtap1'  value="{{addinput}}"/>  -->
+        <button style="background-color:#9fe658;" bindfocus="bindfocus" bindtap='bindtap' value="{{addinput}}">开始
+        </button>
+        </view>
+      </view>
+      <view wx:if="{{sendflag==1}}"  class="footadd">
+        <view class="addbroder">
+             <button class='more' bindtap="btn_default">a</button>
+             <button class='more' bindtap="btn_primary">b</button>
+             <button class='more' bindtap="btn_warn">c</button>     
+        </view>
+      </view>
+        <view wx:if="{{sendflag==2}}" class="foodsend" style='background-color:#fff'>
+         <view style='padding-left:20rpx;'>
+          <view class="input">
+             <button class="bottomButton" bindtap="test_again">再测一次</button>
+             <button class="bottomButton" bindtap="jump">更多测试</button>
+          </view>
+          </view>
+       </view>   
+    </view>
+  </view>

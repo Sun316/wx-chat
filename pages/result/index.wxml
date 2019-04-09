@@ -1,0 +1,288 @@
+        {{answer}} {{title}} 
+{{toView}}
+<scroll-view class="content" scroll-into-view="{{toView}}" scroll-y="true" scroll-with-animation="true">
+ <view class="line1"></view>
+ <!-- 项目概览 -->
+ <view>
+ <view class="know" id="inToView01">
+      <view class="title">
+          <image src="../../images/1.png" class="first"></image>
+          <text class='img_title'>项目概览</text>
+      </view>
+      <view class='zhanwei'></view>
+      <text class='title_name1'>项目简介</text> 
+      <view class='content'>
+       <image src='{{dataList.project.src}}' class='project'></image>
+             <view class="price">
+              <text class='name'>参考价格</text>  <text class='name_content' style="color:#777">{{dataList.project.price}}\n</text>
+              <text class='name1'>关注度</text>    <block  wx:for="{{dataList.attention}}" wx:key="attention"><image class='star' src="{{item.src}}"></image> </block><text>\n</text>
+              <text class='name1'>安全度</text> <block  wx:for="{{dataList.safe}}" wx:key='safe'><image class='star' src="{{item.src}}"></image> </block><text>\n</text>
+              <text class='name1'>复杂度</text><block  wx:for="{{dataList.complexity}}" wx:key='complexity'><image class='star' src="{{item.src}}"></image> </block><text>\n</text>
+              <view class='name' style="width:28%;float:left;">功效</view> <view class='effect'>{{dataList.project.effectList}}\n</view> 
+              </view>
+      </view>
+      <view class='detail'>{{dataList.project.content}}</view>
+      <!-- 特色 -->
+      <view class='figure'>
+             <view class='title_name'>项目特色</view>
+             <view class='detail'>{{dataList.project.characteristic}}</view>
+      </view>
+       <!-- 别名 -->
+      <view class='another' wx:if="{{dataList.id==1||dataList.id==3}}">
+        <view class='title_name'>项目别名</view>
+        <view class='detail'>{{dataList.project.byname}}</view>
+      </view>
+      <!-- 使用仪器 -->
+      <view class='jiqi'>
+        <view class='title_name'>使用机器</view>
+        <view class='alike_content'>{{dataList.project.use}}</view>
+        <view class='detail'>{{dataList.project.instrument}}</view>
+      </view>
+      <!-- 相似项目 -->
+      <view class='alike'>
+        <view class='title_name' style='margin-bottom:2rpx;'>相似项目</view>
+        <text class='alike_content'>{{dataList.project.similarity}}</text>
+      </view>
+
+      <!-- 效果展示 -->
+           <view class="line"></view>
+        <view class="title" style='padding-top:20rpx;'>
+          <image src="../../images/1.png" class="first"></image>
+          <text style='margin-left:12rpx'>效果展示</text>
+        </view>
+       <swiper class="swiper" indicator-dots="true" autoplay="true" interval="5000" duration="1000">  
+        <block wx:for="{{dataList.effect}}"  wx:key="movies" wx:for-index="index">  
+         <swiper-item>  
+           <image src="{{item.url}}" class="slide-image" mode="aspectFill"/>  
+         </swiper-item>  
+        </block>  
+       </swiper>
+           <view class="line"></view>
+ </view></view>
+   <!-- 项目档案 -->
+<view class="file" id="inToView02">
+    <view class="title">
+          <image src="../../images/1.png" class="first"></image>
+          <text style='margin-left:12rpx'>项目档案</text>
+    </view>
+    <view class='loop'>  
+      <text class='title_name2'>适合人群</text>
+      <view class='detail1'  wx:for="{{dataList.archives}}" wx:key="archives">{{item.content}}</view>
+    </view> 
+    <view class='loop'>  
+      <text class='title_name2'>禁忌人群</text>
+      <view class='detail1'  wx:for="{{dataList.taboo}}" wx:key="taboo">{{item.content}}</view>
+    </view>  
+    <view class='loop'>  
+      <text class='title_name2'>优点</text>
+      <view class='detail1'  wx:for="{{dataList.advantage}}" wx:key="advantage">{{item.content}}</view>
+    </view>  
+    <view class='loop'>  
+      <text class='title_name2'>缺点</text>
+      <view class='detail1'  wx:for="{{dataList.shortcoming}}" wx:key="shortcoming">{{item.content}}</view>
+    </view>
+    <view class='table'>
+       <view class='table1'>
+         <view class='left'>治疗时长</view>
+         <view class='right'>{{dataList.detail.time}}</view>
+    </view> 
+    <view class='table2'>
+       <view class='left1'>效果持续</view>
+       <view class='right1'>{{dataList.detail.continued}}</view>
+    </view>
+    <view class='table1'>
+       <view class='left'>麻醉方式</view>
+       <view class='right'>{{dataList.detail.anaesthesia}}</view>
+    </view> 
+    <view class='table2'>
+       <view class='left1'>恢复时间</view>
+       <view class='right1'>{{dataList.detail.recovery}}</view>
+    </view>
+    <view class='table1'>
+       <view class='left'>治疗周期</view>
+       <view class='right'>{{dataList.detail.cycle}}</view>
+    </view> 
+    <view class='table2'>
+       <view class='left1' style="margin-left:10rpx;">操作人员资质</view>
+       <view class='right1'>{{dataList.detail.Qualifications}}</view>
+    </view>
+    <view class='table1'>
+       <view class='left'>操作方式</view>
+       <view class='right'>{{dataList.detail.Operator}}</view>
+    </view> 
+    <view class='table2'>
+        <view class='left1' style='margin-left:-13rpx;'>疼痛感</view>
+        <view class='right1'>{{dataList.detail.ache}}</view>
+    </view>
+ </view>
+</view>
+<!-- 常见问题 -->
+ <view class="line7"></view>
+<view class='question' id="inToView03">
+   <view class="title">
+          <image src="../../images/5.png" class="first7"></image>
+          <text class='img_title1'>常见问题</text>
+   </view>
+   <view class='zhanwei1'></view>
+
+
+<view class="container1">
+  <view class="classname" data-listid="11" catchtap="shoufenqin">
+     <image src='../../images/q.png' class="first1"></image>
+     <text class='title_name'>{{dataList.question[0].q}}</text>
+      <text class='down' class="hide{{showView?'show':''}}" bindtap="onChangeShowState">{{showView?'︿':'﹀'}}</text>
+     <text class='up' class="hide{{showView?'':'show'}}" bindtap="onChangeShowState">{{showView?'︿':'﹀'}}</text> </view>
+  <view class="box" data-listid="11" animation="{{ (shoufenqinName == 11) ? animationShoufenqin : ''}}">
+    <view catchtap="alllist">
+        <image src='../../images/a.png' class="first1"></image>
+      <view class="text">{{dataList.question[0].a}}</view>
+    </view>
+  </view>
+</view>
+
+<view class="container1">
+  <view class="classname" data-listid="22" catchtap="shoufenqin">
+     <image src='../../images/q.png' class="first1"></image>
+     <text class='title_name'>{{dataList.question[1].q}}</text>
+      <text class='down' class="hide{{showView?'show':''}}" bindtap="onChangeShowState">{{showView?'︿':'﹀'}}</text>
+     <text class='up' class="hide{{showView?'':'show'}}" bindtap="onChangeShowState">{{showView?'︿':'﹀'}}</text> </view>
+  <view class="box" data-listid="22" animation="{{ (shoufenqinName == 22) ? animationShoufenqin : ''}}">
+    <view catchtap="alllist">
+        <image src='../../images/a.png' class="first1"></image>
+      <view class="text">{{dataList.question[1].a}}</view>
+    </view>
+  </view>
+</view>
+
+<view class="container1">
+  <view class="classname" data-listid="33" catchtap="shoufenqin">
+     <image src='../../images/q.png' class="first1"></image>
+     <text class='title_name'>{{dataList.question[2].q}}</text>
+      <text class='down' class="hide{{showView?'show':''}}" bindtap="onChangeShowState">{{showView?'︿':'﹀'}}</text>
+     <text class='up' class="hide{{showView?'':'show'}}" bindtap="onChangeShowState">{{showView?'︿':'﹀'}}</text> </view>
+  <view class="box" data-listid="33" animation="{{ (shoufenqinName == 33) ? animationShoufenqin : ''}}">
+    <view catchtap="alllist">
+        <image src='../../images/a.png' class="first1"></image>
+      <view class="text">{{dataList.question[2].a}}</view>
+    </view>
+  </view>
+</view>
+
+<view class="container1">
+  <view class="classname" data-listid="44" catchtap="shoufenqin">
+     <image src='../../images/q.png' class="first1"></image>
+     <text class='title_name'>{{dataList.question[3].q}}</text>
+      <text class='down' class="hide{{showView?'show':''}}" bindtap="onChangeShowState">{{showView?'︿':'﹀'}}</text>
+     <text class='up' class="hide{{showView?'':'show'}}" bindtap="onChangeShowState">{{showView?'︿':'﹀'}}</text> </view>
+  <view class="box" data-listid="44" animation="{{ (shoufenqinName == 44) ? animationShoufenqin : ''}}">
+    <view catchtap="alllist">
+        <image src='../../images/a.png' class="first1"></image>
+      <view class="text">{{dataList.question[3].a}}</view>
+    </view>
+  </view>
+</view>
+
+
+
+<view class="container1" wx:if="{{dataList.question.length==5}}">
+  <view class="classname" data-listid="55" catchtap="shoufenqin">
+     <image src='../../images/q.png' class="first1"></image>
+     <text class='title_name'>{{dataList.question[4].q}}</text>
+      <text class='down' class="hide{{showView?'show':''}}" bindtap="onChangeShowState">{{showView?'︿':'﹀'}}</text>
+     <text class='up' class="hide{{showView?'':'show'}}" bindtap="onChangeShowState">{{showView?'︿':'﹀'}}</text> </view>
+  <view class="box" data-listid="55" animation="{{ (shoufenqinName == 55) ? animationShoufenqin : ''}}">
+    <view catchtap="alllist">
+        <image src='../../images/a.png' class="first1"></image>
+      <view class="text">{{dataList.question[4].a}}</view>
+    </view>
+  </view>
+</view>
+
+<view class="container1" wx:if="{{dataList.question.length==6}}">
+  <view class="classname" data-listid="66" catchtap="shoufenqin">
+     <image src='../../images/q.png' class="first1"></image>
+     <text class='title_name'>{{dataList.question[5].q}}</text>
+      <text class='down' class="hide{{showView?'show':''}}">{{showView?'︿':'﹀'}}</text>
+     <text class='up' class="hide{{showView?'':'show'}}" >{{showView?'︿':'﹀'}}</text> </view>
+  <view class="box" data-listid="66" animation="{{ (shoufenqinName == 66) ? animationShoufenqin : ''}}">
+    <view catchtap="alllist">
+        <image src='../../images/a.png' class="first1"></image>
+      <view class="text">{{dataList.question[5].a}}</view>
+    </view>
+  </view>
+</view>
+
+<view class="container1" wx:if="{{dataList.question.length==7}}">
+  <view class="classname" data-listid="77" catchtap="shoufenqin">
+     <image src='../../images/q.png' class="first1"></image>
+     <text class='title_name'>{{dataList.question[6].q}}</text>
+      <text class='down' class="hide{{showView?'show':''}}">{{showView?'︿':'﹀'}}</text>
+     <text class='up' class="hide{{showView?'':'show'}}" >{{showView?'︿':'﹀'}}</text> </view>
+  <view class="box" data-listid="77" animation="{{ (shoufenqinName == 77) ? animationShoufenqin : ''}}">
+    <view catchtap="alllist">
+        <image src='../../images/a.png' class="first1"></image>
+      <view class="text">{{dataList.question[6].a}}</view>
+    </view>
+  </view>
+</view>
+<!-- 
+  <view  class="ques">
+   <view class='question_content'>
+     <image src='../../images/q.png' class="first1"></image>
+     <text class='title_name'></text>
+      <text class='down' class="hide{{showView?'show':''}}" bindtap="onChangeShowState">{{showView?'︿':'﹀'}}</text>
+     <text class='up' class="hide{{showView?'':'show'}}" bindtap="onChangeShowState">{{showView?'︿':'﹀'}}</text> 
+
+      <view class="hide{{showView?'show':''}}">
+    <image src='../../images/a.png' class="first1"></image>
+    <text class="text"></text>
+   </view> 
+   </view>
+  </view> -->
+</view>
+ <view class="line7"></view>
+<!-- 術前提示 -->
+<view class='tips' id="inToView04">
+    <view class="title">
+          <image src="../../images/5.png" class="first7"></image>
+          <text class='img_title1'>术前提示</text>
+    </view>
+       <view class='zhanwei1'></view>
+  <text class='tips_content' wx:for="{{dataList.prompt}}" wx:key="prompt">
+  <text style="">{{item.tip}}\n</text>
+</text>
+</view>
+<!-- 术后护理 -->
+<view class='after_op' id="inToView05">
+  <view class="title">
+          <image src="../../images/6.png" class="first7"></image>
+          <text class='img_title1'>术后护理</text>
+  </view>
+     <view class='zhanwei1'></view>
+  <view wx:for="{{dataList.postoperative}}" wx:key="postoperative">
+   <view class='time'>{{item.time}}  {{item.name}}</view>
+    <view class='tips_content' style='margin-bottom:0rpx;'>
+     <text class='title_name'>恢复提示:\n</text>
+     <text>{{item.tips}}\n</text>
+     <text class='title_name'>护理方法:\n</text>
+     <text>{{item.method.me}}\n</text>
+    </view>
+   </view>
+  </view>
+
+  <view class='bottom'>
+
+
+<text class='bottom_title'>温馨提示</text>
+<text class='bottom_content'>
+以上术后护理仅供参考。因个体差异、采用术式不同，恢复周期、拆线时间及护理方法均会有所不同。具体护理方案，建议遵医嘱执行。
+</text>
+</view>
+</scroll-view>
+
+ <view class="orientation_region">
+ <block wx:for="{{dataList.orientationList}}"  wx:key="orientationList">
+  <view class="orientation_city" bindtap="scrollToViewFn" data-id="{{item.id}}" wx:for-index="index" wx:for-item="item" style='{{key==index?"color:#57b3ba;":""}} z-index:999;' data-index='{{index}}'>{{item.region}}</view>
+ </block>
+</view>
+
